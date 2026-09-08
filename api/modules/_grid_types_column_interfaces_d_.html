@@ -2408,6 +2408,9 @@ img {
 		<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-private">
 			<a href="_grid_types_column_interfaces_d_.html#customattributes" class="tsd-kind-icon">Custom<wbr>Attributes</a>
 		</li>
+		<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-private">
+			<a href="_grid_types_column_interfaces_d_.html#pindirectioninput" class="tsd-kind-icon">Pin<wbr>Direction<wbr>Input</a>
+		</li>
 	</ul>
 </nav>
 <div class="container container-main">
@@ -2439,6 +2442,7 @@ img {
 						<h3>Type aliases</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-is-private"><a href="_grid_types_column_interfaces_d_.html#customattributes" class="tsd-kind-icon">Custom<wbr>Attributes</a></li>
+							<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-private"><a href="_grid_types_column_interfaces_d_.html#pindirectioninput" class="tsd-kind-icon">Pin<wbr>Direction<wbr>Input</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2452,11 +2456,36 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Custom<wbr>Attributes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">TdHTMLAttributes</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLTableCellElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ThHTMLAttributes</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLTableCellElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>index<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/grid/types/column.interfaces.d.ts:678</li>
+						<li>Defined in src/grid/types/column.interfaces.d.ts:712</li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-private">
+				<a name="pindirectioninput" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagPrivate">Private</span> Pin<wbr>Direction<wbr>Input</h3>
+				<div class="tsd-signature tsd-kind-icon">Pin<wbr>Direction<wbr>Input&lt;T&gt;<span class="tsd-signature-symbol">:</span> <a href="../enums/_grid_types_enum_d_.columnpindirection.html" class="tsd-signature-type">ColumnPinDirection</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>column<span class="tsd-signature-symbol">: </span><a href="../interfaces/_grid_types_column_interfaces_d_.columnprops.html" class="tsd-signature-type">ColumnProps</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../enums/_grid_types_enum_d_.columnpindirection.html" class="tsd-signature-type">ColumnPinDirection</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in src/grid/types/column.interfaces.d.ts:26</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Public input shape for <code>ColumnProps.pinDirection</code>.</p>
+					</div>
+					<p>Mirrors the typing pattern used by <code>cellClass</code> (static value, string alias,
+						or a callback). The callback receives the column&#39;s own props and returns the
+						resolved pin direction as either the enum value or one of its string aliases
+					(&#39;left&#39; | &#39;right&#39; | &#39;none&#39;, case-insensitive).</p>
+				</div>
+				<h4 class="tsd-type-parameters-title">Type parameters</h4>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>T</h4>
+					</li>
+				</ul>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
