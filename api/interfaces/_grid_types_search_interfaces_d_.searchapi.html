@@ -2373,6 +2373,9 @@ img {
 					<a href="_grid_types_search_interfaces_d_.searchapi.html#search" class="tsd-kind-icon">search</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="_grid_types_search_interfaces_d_.searchapi.html#searchasync" class="tsd-kind-icon">search<wbr>Async</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
 					<a href="_grid_types_search_interfaces_d_.searchapi.html#searchsettings" class="tsd-kind-icon">search<wbr>Settings</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -2419,6 +2422,7 @@ img {
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_search_interfaces_d_.searchapi.html#toolbarmodule" class="tsd-kind-icon">Toolbar<wbr>Module</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_search_interfaces_d_.searchapi.html#search" class="tsd-kind-icon">search</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_search_interfaces_d_.searchapi.html#searchasync" class="tsd-kind-icon">search<wbr>Async</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_search_interfaces_d_.searchapi.html#searchsettings" class="tsd-kind-icon">search<wbr>Settings</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_search_interfaces_d_.searchapi.html#setsearchsetting" class="tsd-kind-icon">set<wbr>Search<wbr>Setting</a></li>
 						</ul>
@@ -2434,7 +2438,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Toolbar<wbr>Module<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><a href="_grid_types_toolbar_interfaces_d_.toolbarconfig.html" class="tsd-signature-type">ToolbarConfig</a>, editModule<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">editModule</a>, selectionModule<span class="tsd-signature-symbol">?: </span><a href="_grid_types_selection_interfaces_d_.selectionmodel.html" class="tsd-signature-type">SelectionModel</a>, currentViewData<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span>, allowSearching<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, commandColumnModule<span class="tsd-signature-symbol">?: </span><a href="_grid_types_command_interfaces_d_.usecommandcolumnresult.html" class="tsd-signature-type">UseCommandColumnResult</a>, selectionSettings<span class="tsd-signature-symbol">?: </span><a href="_grid_types_selection_interfaces_d_.selectionsettings.html" class="tsd-signature-type">SelectionSettings</a>, showColumnChooser<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, virtualSettings<span class="tsd-signature-symbol">?: </span><a href="_grid_types_virtualization_interface_d_.virtualsettings.html" class="tsd-signature-type">VirtualSettings</a>, totalRecordsCount<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="_grid_types_toolbar_interfaces_d_.toolbarapi.html" class="tsd-signature-type">ToolbarAPI</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/grid/types/search.interfaces.d.ts:121</li>
+						<li>Defined in src/grid/types/search.interfaces.d.ts:129</li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -2532,12 +2536,57 @@ img {
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="searchasync" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> search<wbr>Async</h3>
+				<div class="tsd-signature tsd-kind-icon">search<wbr>Async<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in src/grid/types/search.interfaces.d.ts:111</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Searches the grid and resolves once the grid&#39;s UI has committed the search results.
+						Resolves without rejecting when the search is vetoed by <code>onSearchStart</code> or is a no-op.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>param</dt>
+						<dd><p>The search key to filter grid records.</p>
+						</dd>
+						<dt>returns</dt>
+						<dd><p>Resolves after the search completes.</p>
+						</dd>
+					</dl>
+				</div>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-siganture">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-parameters-title">Parameters</h4>
+									<ul class="tsd-parameters">
+										<li>
+											<h5>key: <span class="tsd-signature-type">string</span></h5>
+										</li>
+									</ul>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 				<a name="searchsettings" class="tsd-anchor"></a>
 				<h3>search<wbr>Settings</h3>
 				<div class="tsd-signature tsd-kind-icon">search<wbr>Settings<span class="tsd-signature-symbol">:</span> <a href="_grid_types_search_interfaces_d_.searchsettings.html" class="tsd-signature-type">SearchSettings</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/grid/types/search.interfaces.d.ts:111</li>
+						<li>Defined in src/grid/types/search.interfaces.d.ts:119</li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2559,7 +2608,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">set<wbr>Search<wbr>Setting<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Dispatch</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">SetStateAction</span><span class="tsd-signature-symbol">&lt;</span><a href="_grid_types_search_interfaces_d_.searchsettings.html" class="tsd-signature-type">SearchSettings</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/grid/types/search.interfaces.d.ts:120</li>
+						<li>Defined in src/grid/types/search.interfaces.d.ts:128</li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">

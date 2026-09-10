@@ -2760,6 +2760,9 @@ img {
 					<a href="_grid_types_grid_interfaces_d_.gridprops.html#pagesettings" class="tsd-kind-icon">page<wbr>Settings</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="_grid_types_grid_interfaces_d_.gridprops.html#pinningsettings" class="tsd-kind-icon">pinning<wbr>Settings</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
 					<a href="_grid_types_grid_interfaces_d_.gridprops.html#query" class="tsd-kind-icon">query</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -2776,9 +2779,6 @@ img {
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
 					<a href="_grid_types_grid_interfaces_d_.gridprops.html#rownumbersettings" class="tsd-kind-icon">row<wbr>Number<wbr>Settings</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="_grid_types_grid_interfaces_d_.gridprops.html#rowpinningsettings" class="tsd-kind-icon">row<wbr>Pinning<wbr>Settings</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
 					<a href="_grid_types_grid_interfaces_d_.gridprops.html#rowtemplate" class="tsd-kind-icon">row<wbr>Template</a>
@@ -3012,13 +3012,13 @@ img {
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grid_interfaces_d_.gridprops.html#modules" class="tsd-kind-icon">modules</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-private"><a href="_grid_types_grid_interfaces_d_.gridprops.html#onrefreshstart" class="tsd-kind-icon">on<wbr>Refresh<wbr>Start</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grid_interfaces_d_.gridprops.html#pagesettings" class="tsd-kind-icon">page<wbr>Settings</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grid_interfaces_d_.gridprops.html#pinningsettings" class="tsd-kind-icon">pinning<wbr>Settings</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grid_interfaces_d_.gridprops.html#query" class="tsd-kind-icon">query</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grid_interfaces_d_.gridprops.html#reordersettings" class="tsd-kind-icon">reorder<wbr>Settings</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grid_interfaces_d_.gridprops.html#resizesettings" class="tsd-kind-icon">resize<wbr>Settings</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grid_interfaces_d_.gridprops.html#rowclass" class="tsd-kind-icon">row<wbr>Class</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grid_interfaces_d_.gridprops.html#rowheight" class="tsd-kind-icon">row<wbr>Height</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grid_interfaces_d_.gridprops.html#rownumbersettings" class="tsd-kind-icon">row<wbr>Number<wbr>Settings</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grid_interfaces_d_.gridprops.html#rowpinningsettings" class="tsd-kind-icon">row<wbr>Pinning<wbr>Settings</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grid_interfaces_d_.gridprops.html#rowtemplate" class="tsd-kind-icon">row<wbr>Template</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grid_interfaces_d_.gridprops.html#searchsettings" class="tsd-kind-icon">search<wbr>Settings</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grid_interfaces_d_.gridprops.html#selectionsettings" class="tsd-kind-icon">selection<wbr>Settings</a></li>
@@ -5737,7 +5737,7 @@ return (
 				<div class="tsd-signature tsd-kind-icon">on<wbr>Pinned<wbr>Rows<wbr>Changed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="_grid_types_pinning_interfaces_d_.rowpinningevent.html" class="tsd-signature-type">RowPinningEvent</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/grid/types/grid.interfaces.d.ts:3617</li>
+						<li>Defined in src/grid/types/grid.interfaces.d.ts:3619</li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -8195,6 +8195,36 @@ maxNestingDepth={3}</code></pre>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="pinningsettings" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> pinning<wbr>Settings</h3>
+				<div class="tsd-signature tsd-kind-icon">pinning<wbr>Settings<span class="tsd-signature-symbol">:</span> <a href="_grid_types_pinning_interfaces_d_.pinningsettings.html" class="tsd-signature-type">PinningSettings</a></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in src/grid/types/grid.interfaces.d.ts:3595</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Global configuration settings for pinning behavior across both rows and columns.</p>
+					</div>
+					<p>Controls whether pinning is enabled, which dimensions (<code>type</code>) are eligible,
+						and which sides are permitted (top/bottom for rows, left/right for columns).
+					Follows the same composition pattern as <code>virtualizationSettings</code>.</p>
+					<dl class="tsd-comment-tags">
+						<dt>default</dt>
+						<dd><p>undefined</p>
+						</dd>
+						<dt>example</dt>
+						<dd><pre><code class="language-tsx">&lt;Grid
+  dataSource={employees}
+  pinningSettings={{ enabled: true, type: PinScope.Both, allowLeftPin: true, allowRightPin: true }}
+  isRowPinned={(row) =&gt; row.isPinned ? &#39;top&#39; : null}
+/&gt;</code></pre>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 				<a name="query" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagOptional">Optional</span> query</h3>
 				<div class="tsd-signature tsd-kind-icon">query<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Query</span></div>
@@ -8383,34 +8413,6 @@ const GridExample: React.FC = () =&gt; {
   dataSource={employees}
   columns={columns}
   rowNumberSettings={{ enabled: true }}
-/&gt;</code></pre>
-						</dd>
-					</dl>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="rowpinningsettings" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagOptional">Optional</span> row<wbr>Pinning<wbr>Settings</h3>
-				<div class="tsd-signature tsd-kind-icon">row<wbr>Pinning<wbr>Settings<span class="tsd-signature-symbol">:</span> <a href="_grid_types_pinning_interfaces_d_.rowpinningsettings.html" class="tsd-signature-type">RowPinningSettings</a></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in src/grid/types/grid.interfaces.d.ts:3593</li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Global configuration settings for row pinning behavior.</p>
-					</div>
-					<p>Controls whether row pinning is enabled and which directions (top/bottom) are permitted.</p>
-					<dl class="tsd-comment-tags">
-						<dt>default</dt>
-						<dd><p>undefined</p>
-						</dd>
-						<dt>example</dt>
-						<dd><pre><code class="language-tsx">&lt;Grid
-  dataSource={employees}
-  rowPinningSettings={{ enabled: true, allowTopPin: true, allowBottomPin: false }}
-  isRowPinned={(row) =&gt; row.isPinned ? &#39;top&#39; : null}
 /&gt;</code></pre>
 						</dd>
 					</dl>

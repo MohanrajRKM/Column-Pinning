@@ -2379,6 +2379,9 @@ img {
 					<a href="_grid_types_grouping_interfaces_d_.igroupmodule.html#cleargrouping" class="tsd-kind-icon">clear<wbr>Grouping</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="_grid_types_grouping_interfaces_d_.igroupmodule.html#cleargroupingasync" class="tsd-kind-icon">clear<wbr>Grouping<wbr>Async</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
 					<a href="_grid_types_grouping_interfaces_d_.igroupmodule.html#collapseall" class="tsd-kind-icon">collapse<wbr>All</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -2388,7 +2391,13 @@ img {
 					<a href="_grid_types_grouping_interfaces_d_.igroupmodule.html#groupcolumn" class="tsd-kind-icon">group<wbr>Column</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="_grid_types_grouping_interfaces_d_.igroupmodule.html#groupcolumnasync" class="tsd-kind-icon">group<wbr>Column<wbr>Async</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
 					<a href="_grid_types_grouping_interfaces_d_.igroupmodule.html#ungroupcolumn" class="tsd-kind-icon">ungroup<wbr>Column</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="_grid_types_grouping_interfaces_d_.igroupmodule.html#ungroupcolumnasync" class="tsd-kind-icon">ungroup<wbr>Column<wbr>Async</a>
 				</li>
 			</ul>
 		</li>
@@ -2449,10 +2458,13 @@ gridRef.current.ungroupColumn(&#39;ShipCountry&#39;);</code></pre>
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grouping_interfaces_d_.igroupmodule.html#cleargrouping" class="tsd-kind-icon">clear<wbr>Grouping</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grouping_interfaces_d_.igroupmodule.html#cleargroupingasync" class="tsd-kind-icon">clear<wbr>Grouping<wbr>Async</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grouping_interfaces_d_.igroupmodule.html#collapseall" class="tsd-kind-icon">collapse<wbr>All</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grouping_interfaces_d_.igroupmodule.html#expandall" class="tsd-kind-icon">expand<wbr>All</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grouping_interfaces_d_.igroupmodule.html#groupcolumn" class="tsd-kind-icon">group<wbr>Column</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grouping_interfaces_d_.igroupmodule.html#groupcolumnasync" class="tsd-kind-icon">group<wbr>Column<wbr>Async</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grouping_interfaces_d_.igroupmodule.html#ungroupcolumn" class="tsd-kind-icon">ungroup<wbr>Column</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_grid_types_grouping_interfaces_d_.igroupmodule.html#ungroupcolumnasync" class="tsd-kind-icon">ungroup<wbr>Column<wbr>Async</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2496,12 +2508,47 @@ gridRef.current.ungroupColumn(&#39;ShipCountry&#39;);</code></pre>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="cleargroupingasync" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> clear<wbr>Grouping<wbr>Async</h3>
+				<div class="tsd-signature tsd-kind-icon">clear<wbr>Grouping<wbr>Async<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in src/grid/types/grouping.interfaces.d.ts:244</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Clear all grouping and resolve once the grid&#39;s UI has committed the flat row display.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>returns</dt>
+						<dd><p>Resolves after grouping is cleared.</p>
+						</dd>
+					</dl>
+				</div>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-siganture">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 				<a name="collapseall" class="tsd-anchor"></a>
 				<h3>collapse<wbr>All</h3>
 				<div class="tsd-signature tsd-kind-icon">collapse<wbr>All<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/grid/types/grouping.interfaces.d.ts:234</li>
+						<li>Defined in src/grid/types/grouping.interfaces.d.ts:256</li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2536,7 +2583,7 @@ gridRef.current.ungroupColumn(&#39;ShipCountry&#39;);</code></pre>
 				<div class="tsd-signature tsd-kind-icon">expand<wbr>All<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/grid/types/grouping.interfaces.d.ts:228</li>
+						<li>Defined in src/grid/types/grouping.interfaces.d.ts:250</li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2616,6 +2663,57 @@ gridRef.current.ungroupColumn(&#39;ShipCountry&#39;);</code></pre>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="groupcolumnasync" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> group<wbr>Column<wbr>Async</h3>
+				<div class="tsd-signature tsd-kind-icon">group<wbr>Column<wbr>Async<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, isResetRequired<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in src/grid/types/grouping.interfaces.d.ts:231</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Add a column to grouping hierarchy and resolve once the grid&#39;s UI has committed the change.
+						Resolves without rejecting when the group is vetoed by <code>onGroupStart</code> or is a no-op.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>param</dt>
+						<dd><p>Field names to group by.</p>
+						</dd>
+						<dt>param</dt>
+						<dd><p>If true, resets existing groupings before applying the new grouping.</p>
+						</dd>
+						<dt>returns</dt>
+						<dd><p>Resolves after grouping completes.</p>
+						</dd>
+					</dl>
+				</div>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-siganture">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, isResetRequired<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-parameters-title">Parameters</h4>
+									<ul class="tsd-parameters">
+										<li>
+											<h5>fields: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+										</li>
+										<li>
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> isResetRequired: <span class="tsd-signature-type">boolean</span></h5>
+										</li>
+									</ul>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 				<a name="ungroupcolumn" class="tsd-anchor"></a>
 				<h3>ungroup<wbr>Column</h3>
 				<div class="tsd-signature tsd-kind-icon">ungroup<wbr>Column<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
@@ -2653,6 +2751,50 @@ gridRef.current.ungroupColumn(&#39;ShipCountry&#39;);</code></pre>
 										</li>
 									</ul>
 									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="ungroupcolumnasync" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> ungroup<wbr>Column<wbr>Async</h3>
+				<div class="tsd-signature tsd-kind-icon">ungroup<wbr>Column<wbr>Async<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in src/grid/types/grouping.interfaces.d.ts:238</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Remove a column from grouping hierarchy and resolve once the grid&#39;s UI has committed the change.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>param</dt>
+						<dd><p>Field names to ungroup.</p>
+						</dd>
+						<dt>returns</dt>
+						<dd><p>Resolves after ungrouping completes.</p>
+						</dd>
+					</dl>
+				</div>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-siganture">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-parameters-title">Parameters</h4>
+									<ul class="tsd-parameters">
+										<li>
+											<h5>fields: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+										</li>
+									</ul>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 								</li>
 							</ul>
 						</li>

@@ -2363,6 +2363,9 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
+		<li class=" tsd-kind-enum tsd-parent-kind-external-module">
+			<a href="../enums/_grid_types_pinning_interfaces_d_.pinscope.html" class="tsd-kind-icon">Pin<wbr>Scope</a>
+		</li>
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
 			<a href="_grid_types_pinning_interfaces_d_.pinningmoduleoptions.html" class="tsd-kind-icon">Pinning<wbr>Module<wbr>Options</a>
 		</li>
@@ -2395,11 +2398,11 @@ img {
 				</li>
 			</ul>
 		</li>
+		<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+			<a href="_grid_types_pinning_interfaces_d_.pinningsettings.html" class="tsd-kind-icon">Pinning<wbr>Settings</a>
+		</li>
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
 			<a href="_grid_types_pinning_interfaces_d_.rowpinningevent.html" class="tsd-kind-icon">Row<wbr>Pinning<wbr>Event</a>
-		</li>
-		<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-			<a href="_grid_types_pinning_interfaces_d_.rowpinningsettings.html" class="tsd-kind-icon">Row<wbr>Pinning<wbr>Settings</a>
 		</li>
 		<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
 			<a href="../modules/_grid_types_pinning_interfaces_d_.html#pinningmoduletype" class="tsd-kind-icon">Pinning<wbr>Module<wbr>Type</a>
@@ -2462,7 +2465,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">dynamically<wbr>Changed<wbr>Pinned<wbr>Rows<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RefObject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/grid/types/pinning.interfaces.d.ts:90</li>
+						<li>Defined in src/grid/types/pinning.interfaces.d.ts:169</li>
 					</ul>
 				</aside>
 			</section>
@@ -2472,7 +2475,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">dynamically<wbr>Changed<wbr>Pinned<wbr>Rows<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RefObject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/grid/types/pinning.interfaces.d.ts:91</li>
+						<li>Defined in src/grid/types/pinning.interfaces.d.ts:170</li>
 					</ul>
 				</aside>
 			</section>
@@ -2482,7 +2485,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">initialize<wbr>Pinned<wbr>Rows<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>isRowPinned<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>row<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">"top"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"bottom"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/grid/types/pinning.interfaces.d.ts:84</li>
+						<li>Defined in src/grid/types/pinning.interfaces.d.ts:163</li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -2531,14 +2534,15 @@ img {
 				<div class="tsd-signature tsd-kind-icon">pin<wbr>Column<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>field<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, direction<span class="tsd-signature-symbol">: </span><a href="../enums/_grid_types_enum_d_.columnpindirection.html#left" class="tsd-signature-type">Left</a><span class="tsd-signature-symbol"> | </span><a href="../enums/_grid_types_enum_d_.columnpindirection.html#right" class="tsd-signature-type">Right</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/grid/types/pinning.interfaces.d.ts:101</li>
+						<li>Defined in src/grid/types/pinning.interfaces.d.ts:181</li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
 						<p>Pins a column by <code>field</code> (matching <code>ColumnProps.field</code>) to the given side.
-							Updates <code>uiColumns.current</code> in place and triggers a refresh so the new
-						sticky offset maps and pinned-cell CSS classes take effect on the next paint.</p>
+							Updates <code>uiColumns.current</code> in place and bumps <code>setColumnChooserState</code> so
+							<code>prepareColumns</code> reruns for the new pin direction. The sticky offset maps
+						and pinned-cell CSS classes take effect on the next paint.</p>
 					</div>
 					<dl class="tsd-comment-tags">
 						<dt>param</dt>
@@ -2582,7 +2586,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">pinned<wbr>Rows<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>isPinned<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>pinBucket<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">"top"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"bottom"</span><span class="tsd-signature-symbol">; </span>rowData<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/grid/types/pinning.interfaces.d.ts:85</li>
+						<li>Defined in src/grid/types/pinning.interfaces.d.ts:164</li>
 					</ul>
 				</aside>
 			</section>
@@ -2592,14 +2596,14 @@ img {
 				<div class="tsd-signature tsd-kind-icon">unpin<wbr>Column<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>field<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/grid/types/pinning.interfaces.d.ts:110</li>
+						<li>Defined in src/grid/types/pinning.interfaces.d.ts:190</li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Unpins a column by <code>field</code>, collapsing its pin direction to <code>None</code> and
-							refreshing the grid so sticky CSS offsets drop and the column flows in
-						the main virtual order.</p>
+						<p>Unpins a column by <code>field</code>, collapsing its pin direction to <code>None</code>.
+							Bumps <code>setColumnChooserState</code> so <code>prepareColumns</code> reruns and the column
+						flows back into the main virtual order with sticky CSS offsets dropped.</p>
 					</div>
 					<dl class="tsd-comment-tags">
 						<dt>param</dt>
@@ -2637,7 +2641,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">update<wbr>Pinned<wbr>Row<wbr>Objects<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>savedRowObject<span class="tsd-signature-symbol">: </span><a href="_grid_types_interfaces_d_.irow.html" class="tsd-signature-type">IRow</a><span class="tsd-signature-symbol">&lt;</span><a href="_grid_types_column_interfaces_d_.columnprops.html" class="tsd-signature-type">ColumnProps</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span>, startArgs<span class="tsd-signature-symbol">: </span><a href="_grid_types_edit_interfaces_d_.saveevent.html" class="tsd-signature-type">SaveEvent</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, isEditCell<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/grid/types/pinning.interfaces.d.ts:83</li>
+						<li>Defined in src/grid/types/pinning.interfaces.d.ts:162</li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -2674,7 +2678,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">update<wbr>Pinned<wbr>Rows<wbr>State<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>rows<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, isPinned<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, position<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">"top"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"bottom"</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/grid/types/pinning.interfaces.d.ts:82</li>
+						<li>Defined in src/grid/types/pinning.interfaces.d.ts:161</li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
